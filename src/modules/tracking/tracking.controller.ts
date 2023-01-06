@@ -5,6 +5,7 @@ import {
   ApiNotFoundResponse,
   ApiOperation,
   ApiResponse,
+  ApiTags,
 } from '@nestjs/swagger';
 import { TrackingService } from './tracking.service';
 import {
@@ -17,6 +18,7 @@ import { ITracking } from './types';
 import { GetTrackingsPaginatedResponseDto } from './dto/get-trackings-paginated-response.dto';
 
 @Controller()
+@ApiTags('Trackings')
 export class TrackingController {
   constructor(private readonly trackingService: TrackingService) {}
 
